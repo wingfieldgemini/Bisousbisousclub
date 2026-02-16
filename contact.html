@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Bisous Bisous Club Cannes | Réservations & Informations</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Contactez le Bisous Bisous Club à Cannes. Réservations, informations, adresse Palais des Festivals. WhatsApp, email et téléphone disponibles.">
+    <meta name="keywords" content="contact bisous bisous, réservation cannes, palais des festivals, croisette contact, nightclub cannes contact">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💋</text></svg>">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-logo">Contactez-Nous</div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Bisous Bisous</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="events.html" class="nav-link">Événements</a></li>
+                <li><a href="booking.html" class="nav-link">Réserver</a></li>
+                <li><a href="gallery.html" class="nav-link">Galerie</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="about.html" class="nav-link">À Propos</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" style="height: 60vh; background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)), url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1920&h=1080&fit=crop') center/cover;">
+        <div class="hero-content">
+            <h1 class="hero-title">Contactez-Nous</h1>
+            <p class="hero-subtitle">Nous sommes là pour vous</p>
+            <p class="hero-description">Réservations, informations, événements privés - votre expérience commence ici.</p>
+        </div>
+    </section>
+    
+    <!-- Contact Information -->
+    <section class="section">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div class="fade-in" style="background: var(--gray); padding: 40px; border-radius: 20px; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 20px; color: var(--gold);">📍</div>
+                    <h3 style="color: var(--gold); margin-bottom: 20px;">Adresse</h3>
+                    <p style="color: var(--white); font-size: 1.1rem; margin-bottom: 10px;">1 Boulevard de la Croisette</p>
+                    <p style="color: var(--white); font-size: 1.1rem; margin-bottom: 10px;">Palais des Festivals et des Congrès</p>
+                    <p style="color: var(--white); font-size: 1.1rem;">06400 Cannes, France</p>
+                </div>
+                
+                <div class="fade-in" style="background: var(--gray); padding: 40px; border-radius: 20px; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 20px; color: var(--pink);">🕒</div>
+                    <h3 style="color: var(--pink); margin-bottom: 20px;">Horaires</h3>
+                    <p style="color: var(--white); font-size: 1.1rem; margin-bottom: 10px;"><strong>Vendredi:</strong> Minuit - 5h00</p>
+                    <p style="color: var(--white); font-size: 1.1rem; margin-bottom: 10px;"><strong>Samedi:</strong> Minuit - 5h00</p>
+                    <p style="color: var(--text-light); font-style: italic;">Fermé Dimanche-Jeudi</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 15px;">Parfois ouvert le jeudi pour événements spéciaux</p>
+                </div>
+                
+                <div class="fade-in" style="background: var(--gray); padding: 40px; border-radius: 20px; text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 20px; color: var(--gold);">📞</div>
+                    <h3 style="color: var(--gold); margin-bottom: 20px;">Réservations</h3>
+                    <p style="color: var(--white); font-size: 1.1rem; margin-bottom: 15px;">
+                        <strong>Téléphone:</strong><br>
+                        +33 4 92 99 70 00
+                    </p>
+                    <p style="color: var(--white); font-size: 1.1rem; margin-bottom: 15px;">
+                        <strong>Email:</strong><br>
+                        reservations@bisousbisous.club
+                    </p>
+                    <a href="#" onclick="openWhatsApp()" style="color: var(--pink); text-decoration: none; font-weight: 600;">
+                        💬 WhatsApp Booking
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Google Maps -->
+    <section class="section" style="padding: 0;">
+        <div class="container" style="padding: 0;">
+            <div style="text-align: center; margin-bottom: 40px; padding: 0 20px;">
+                <h2 class="section-title fade-in">Notre Emplacement</h2>
+                <p class="section-subtitle fade-in">Au cœur de la Croisette, sur le toit du Casino Barrière</p>
+            </div>
+            
+            <div class="fade-in" style="height: 400px; border-radius: 20px; overflow: hidden; margin: 0 20px;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2894.8583147159817!2d7.015196315747633!3d43.550847179124676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ce81c48b6b7e07%3A0x8e5b8e9b5f8d2a4b!2sPalais%20des%20Festivals%20et%20des%20Congr%C3%A8s!5e0!3m2!1sfr!2sfr!4v1645123456789!5m2!1sfr!2sfr"
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; border-radius: 20px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Form -->
+    <section class="section" style="background: var(--gray);">
+        <div class="container">
+            <h2 class="section-title fade-in">Demande de Réservation</h2>
+            <p class="section-subtitle fade-in">Parlez-nous de votre soirée idéale</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 60px; margin-top: 60px; align-items: start;">
+                <div class="slide-in-left">
+                    <form id="contact-form" style="background: var(--black); padding: 40px; border-radius: 20px;">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Nom Complet *</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+33 6 12 34 56 78">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="date">Date Souhaitée</label>
+                            <input type="date" id="date" name="date" class="form-input">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="message">Votre Message *</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Décrivez-nous votre demande : réservation de table, événement privé, service bouteilles..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">
+                            Envoyer la Demande
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="slide-in-right">
+                    <div style="background: var(--light-gray); padding: 40px; border-radius: 20px; margin-bottom: 30px;">
+                        <h3 style="color: var(--gold); margin-bottom: 25px; font-size: 1.8rem;">💬 Réservation Express</h3>
+                        <p style="color: var(--text-light); margin-bottom: 25px; line-height: 1.6;">
+                            Pour une réservation rapide, contactez-nous directement sur WhatsApp. Réponse garantie en moins de 30 minutes !
+                        </p>
+                        <a href="#" onclick="openWhatsApp()" class="btn btn-pink btn-magnetic" style="width: 100%;">
+                            Réserver sur WhatsApp
+                        </a>
+                    </div>
+                    
+                    <div style="background: var(--light-gray); padding: 40px; border-radius: 20px;">
+                        <h3 style="color: var(--pink); margin-bottom: 25px; font-size: 1.8rem;">📋 Infos Utiles</h3>
+                        <ul style="color: var(--text-light); line-height: 1.8; list-style: none; padding: 0;">
+                            <li style="margin-bottom: 15px;">🔞 <strong>Entrée:</strong> 18 ans minimum avec pièce d'identité</li>
+                            <li style="margin-bottom: 15px;">👔 <strong>Dress Code:</strong> Tenue élégante exigée</li>
+                            <li style="margin-bottom: 15px;">🚗 <strong>Parking:</strong> Valet disponible (€25)</li>
+                            <li style="margin-bottom: 15px;">💳 <strong>Paiement:</strong> Carte et espèces acceptées</li>
+                            <li style="margin-bottom: 15px;">🥂 <strong>Tables VIP:</strong> Consommation minimum €500</li>
+                            <li>🎵 <strong>Musique:</strong> House, Disco, EDM, Hip-Hop</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Social Media -->
+    <section class="section">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title fade-in">Suivez-Nous</h2>
+            <p class="section-subtitle fade-in">Restez connectés pour les dernières actualités</p>
+            
+            <div style="display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap;">
+                <a href="https://instagram.com/bisousbisousclub" target="_blank" class="fade-in" style="background: var(--gray); padding: 30px; border-radius: 20px; text-decoration: none; transition: var(--transition); display: block; min-width: 200px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">📷</div>
+                    <h3 style="color: var(--pink); margin-bottom: 10px;">Instagram</h3>
+                    <p style="color: var(--text-light);">@bisousbisousclub<br>15K+ followers</p>
+                </a>
+                
+                <a href="https://facebook.com/bisousbisousclub" target="_blank" class="fade-in" style="background: var(--gray); padding: 30px; border-radius: 20px; text-decoration: none; transition: var(--transition); display: block; min-width: 200px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">👥</div>
+                    <h3 style="color: var(--gold); margin-bottom: 10px;">Facebook</h3>
+                    <p style="color: var(--text-light);">Bisous Bisous Club<br>Événements & News</p>
+                </a>
+                
+                <a href="https://tiktok.com/@bisousbisousclub" target="_blank" class="fade-in" style="background: var(--gray); padding: 30px; border-radius: 20px; text-decoration: none; transition: var(--transition); display: block; min-width: 200px;">
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">🎵</div>
+                    <h3 style="color: var(--pink); margin-bottom: 10px;">TikTok</h3>
+                    <p style="color: var(--text-light);">@bisousbisousclub<br>Vibes & Moments</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="section" style="background: var(--gray);">
+        <div class="container">
+            <h2 class="section-title fade-in">Questions Fréquentes</h2>
+            <p class="section-subtitle fade-in">Tout ce que vous devez savoir</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; margin-top: 60px;">
+                <div class="fade-in" style="background: var(--black); padding: 30px; border-radius: 15px;">
+                    <h4 style="color: var(--gold); margin-bottom: 15px;">💰 Y a-t-il un droit d'entrée ?</h4>
+                    <p style="color: var(--text-light);">Non, l'entrée est gratuite ! Seule une tenue élégante est exigée. Les tables VIP ont une consommation minimum.</p>
+                </div>
+                
+                <div class="fade-in" style="background: var(--black); padding: 30px; border-radius: 15px;">
+                    <h4 style="color: var(--pink); margin-bottom: 15px;">⏰ Faut-il réserver à l'avance ?</h4>
+                    <p style="color: var(--text-light);">Fortement recommandé, surtout les weekends et événements spéciaux. Réservation possible jusqu'à 23h le jour J.</p>
+                </div>
+                
+                <div class="fade-in" style="background: var(--black); padding: 30px; border-radius: 15px;">
+                    <h4 style="color: var(--gold); margin-bottom: 15px;">🚗 Comment venir au club ?</h4>
+                    <p style="color: var(--text-light);">Parking valet disponible. Accès direct par l'ascenseur du Casino Barrière. Métro arrêt Palais des Festivals.</p>
+                </div>
+                
+                <div class="fade-in" style="background: var(--black); padding: 30px; border-radius: 15px;">
+                    <h4 style="color: var(--pink); margin-bottom: 15px;">🎉 Organisez-vous des événements privés ?</h4>
+                    <p style="color: var(--text-light);">Oui ! Anniversaires, enterrements de vie, événements d'entreprise. Contactez-nous pour un devis personnalisé.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bisous Bisous Club</h3>
+                    <p>Le club le plus exclusif de Cannes, perché au sommet du Casino Barrière avec vue imprenable sur le port.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/bisousbisousclub" class="social-link" target="_blank">📷</a>
+                        <a href="https://facebook.com/bisousbisousclub" class="social-link" target="_blank">👥</a>
+                        <a href="https://tiktok.com/@bisousbisousclub" class="social-link" target="_blank">🎵</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>Vendredi: 00h00 - 05h00</p>
+                    <p>Samedi: 00h00 - 05h00</p>
+                    <p>Parfois Jeudi (événements spéciaux)</p>
+                    <p>Fermé Dimanche-Mercredi</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>1 Boulevard de la Croisette</p>
+                    <p>06400 Cannes, France</p>
+                    <p>Réservations: DM ou appel</p>
+                    <a href="#" onclick="openWhatsApp()">WhatsApp Booking</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <a href="booking.html">Réservation VIP</a>
+                    <a href="menu.html">Service Bouteilles</a>
+                    <a href="events.html">Événements Privés</a>
+                    <p>Valet Parking Disponible</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bisous Bisous Club. Tous droits réservés. | 
+                <a href="#">Mentions Légales</a> | 
+                <a href="#">Confidentialité</a> | 
+                Designed by <a href="https://wingfieldgemini.github.io" target="_blank">WingfieldGemini</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

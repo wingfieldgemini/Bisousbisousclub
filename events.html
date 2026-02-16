@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements & DJs - Bisous Bisous Club Cannes</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Découvrez les événements et DJs du Bisous Bisous Club Cannes. House, Disco, EDM, Hip Hop dans le club le plus exclusif de la Côte d'Azur.">
+    <meta name="keywords" content="events cannes, dj cannes, nightclub events, house music, disco, edm cannes">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Événements & DJs - Bisous Bisous Club Cannes">
+    <meta property="og:description" content="Les meilleures soirées et DJs de Cannes dans un cadre d'exception">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=630&fit=crop">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💋</text></svg>">
+    
+    <!-- Schema Markup for Events -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Deep House Odyssey",
+        "startDate": "2024-02-16T00:00",
+        "endDate": "2024-02-16T05:00",
+        "location": {
+            "@type": "Place",
+            "name": "Bisous Bisous Club",
+            "address": "1 Boulevard de la Croisette, 06400 Cannes, France"
+        },
+        "organizer": {
+            "@type": "Organization",
+            "name": "Bisous Bisous Club"
+        }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-logo">Événements</div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Bisous Bisous</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="events.html" class="nav-link active">Événements</a></li>
+                <li><a href="booking.html" class="nav-link">Réserver</a></li>
+                <li><a href="gallery.html" class="nav-link">Galerie</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="about.html" class="nav-link">À Propos</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" style="height: 60vh; background: linear-gradient(rgba(10,10,10,0.7), rgba(10,10,10,0.7)), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&h=1080&fit=crop') center/cover;">
+        <div class="hero-content">
+            <h1 class="hero-title">Événements & DJs</h1>
+            <p class="hero-subtitle">La programmation la plus éclectique de Cannes</p>
+            <p class="hero-description">House, Disco, New Wave, EDM, Hip Hop, Top 40 - Découvrez nos soirées légendaires</p>
+        </div>
+    </section>
+    
+    <!-- Calendar Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Calendrier des Événements</h2>
+            <p class="section-subtitle fade-in">Planifiez vos soirées à l'avance</p>
+            
+            <div class="calendar-container fade-in">
+                <div class="calendar-header">
+                    <button id="prevMonth" class="calendar-nav">‹</button>
+                    <h3 id="monthYear" style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--white);"></h3>
+                    <button id="nextMonth" class="calendar-nav">›</button>
+                </div>
+                
+                <div class="calendar-grid" id="calendar">
+                    <div id="calendarGrid" class="calendar-grid"></div>
+                </div>
+                
+                <div style="margin-top: 30px; padding: 20px; background: var(--light-gray); border-radius: 15px;">
+                    <h4 style="color: var(--gold); margin-bottom: 15px;">Légende</h4>
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <div style="width: 20px; height: 20px; background: var(--gold); border-radius: 5px;"></div>
+                            <span style="color: var(--text-light);">Événement Spécial</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <div style="width: 20px; height: 20px; background: var(--pink); border-radius: 5px;"></div>
+                            <span style="color: var(--text-light);">Soirée Thématique</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Upcoming Events -->
+    <section class="section" style="background: var(--gray);">
+        <div class="container">
+            <h2 class="section-title fade-in">Événements à Venir</h2>
+            <p class="section-subtitle fade-in">Ne manquez aucune de nos soirées exceptionnelles</p>
+            
+            <div style="display: grid; gap: 40px; margin-top: 60px;">
+                <!-- Event 1 -->
+                <div class="event-card fade-in" style="display: grid; grid-template-columns: 300px 1fr; gap: 30px; background: var(--black); border-radius: 20px; overflow: hidden; padding: 0;">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=250&fit=crop" alt="Deep House Night" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 30px;">
+                        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                            <span style="background: var(--gold); color: var(--black); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">HOUSE</span>
+                            <span style="background: var(--pink); color: var(--white); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">DEEP</span>
+                        </div>
+                        <h3 style="font-family: var(--font-heading); font-size: 2rem; color: var(--white); margin-bottom: 10px;">Deep House Odyssey</h3>
+                        <div style="color: var(--gold); font-weight: 600; margin-bottom: 15px; font-size: 1.1rem;">📅 Vendredi 16 Février 2024 | 00h00 - 05h00</div>
+                        <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 20px;">Plongez dans l'univers hypnotique de la deep house avec DJ Magnetic. Une soirée où les basses profondes rencontrent des mélodies envoûtantes pour créer une expérience sonore inoubliable. Laissez-vous emporter par un voyage musical qui vous mènera jusqu'à l'aube.</p>
+                        <div style="display: flex; gap: 15px; align-items: center;">
+                            <a href="booking.html" class="btn btn-primary" style="padding: 10px 25px;">Réserver</a>
+                            <span style="color: var(--text-muted);">🎧 DJ Magnetic | 💫 Special Lighting</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 2 -->
+                <div class="event-card fade-in" style="display: grid; grid-template-columns: 300px 1fr; gap: 30px; background: var(--black); border-radius: 20px; overflow: hidden; padding: 0;">
+                    <img src="https://images.unsplash.com/photo-1571266028243-d220c2dcbf53?w=300&h=250&fit=crop" alt="Disco Fever" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 30px;">
+                        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                            <span style="background: var(--gold); color: var(--black); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">DISCO</span>
+                            <span style="background: var(--pink); color: var(--white); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">RETRO</span>
+                        </div>
+                        <h3 style="font-family: var(--font-heading); font-size: 2rem; color: var(--white); margin-bottom: 10px;">Disco Fever Night</h3>
+                        <div style="color: var(--gold); font-weight: 600; margin-bottom: 15px; font-size: 1.1rem;">📅 Samedi 17 Février 2024 | 00h00 - 05h00</div>
+                        <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 20px;">Voyage dans le temps avec notre soirée disco légendaire! Paillettes, miroirs et groove vintage vous attendent pour une nuit comme dans les années 70. DJ Sparkle vous fera danser sur les plus grands classiques du disco et des remixes modernes enflammés.</p>
+                        <div style="display: flex; gap: 15px; align-items: center;">
+                            <a href="booking.html" class="btn btn-primary" style="padding: 10px 25px;">Réserver</a>
+                            <span style="color: var(--text-muted);">🪩 DJ Sparkle | ✨ Disco Ball Show</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 3 -->
+                <div class="event-card fade-in" style="display: grid; grid-template-columns: 300px 1fr; gap: 30px; background: var(--black); border-radius: 20px; overflow: hidden; padding: 0;">
+                    <img src="https://images.unsplash.com/photo-1571168962643-4c8b2d99b9fe?w=300&h=250&fit=crop" alt="EDM Night" style="width: 100%; height: 250px; object-fit: cover;">
+                    <div style="padding: 30px;">
+                        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                            <span style="background: var(--gold); color: var(--black); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">EDM</span>
+                            <span style="background: var(--pink); color: var(--white); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">ELECTRONIC</span>
+                        </div>
+                        <h3 style="font-family: var(--font-heading); font-size: 2rem; color: var(--white); margin-bottom: 10px;">EDM Explosion</h3>
+                        <div style="color: var(--gold); font-weight: 600; margin-bottom: 15px; font-size: 1.1rem;">📅 Vendredi 23 Février 2024 | 00h00 - 05h00</div>
+                        <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 20px;">Les beats électroniques les plus puissants avec des DJs internationaux invités spécialement pour cette soirée explosive. Une expérience sonore immersive avec système audio de pointe qui fera trembler la Croisette. Préparez-vous à danser comme jamais!</p>
+                        <div style="display: flex; gap: 15px; align-items: center;">
+                            <a href="booking.html" class="btn btn-primary" style="padding: 10px 25px;">Réserver</a>
+                            <span style="color: var(--text-muted);">🎛️ International DJs | 🔊 Premium Sound</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- DJ Lineup -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Nos DJs Résidents</h2>
+            <p class="section-subtitle fade-in">Les artistes qui font vibrer Cannes</p>
+            
+            <div class="dj-grid">
+                <div class="dj-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop&crop=face" alt="DJ Magnetic" class="dj-image">
+                    <div class="dj-content">
+                        <h3 class="dj-name">DJ Magnetic</h3>
+                        <div class="dj-genre">Deep House • Techno</div>
+                        <p class="dj-bio">Pioneer de la scène deep house cannoise, DJ Magnetic hypnotise les dancefloors avec ses sets profonds et envoûtants. Résident officiel depuis 3 ans, il transforme chaque vendredi en voyage sonore inoubliable.</p>
+                        <div style="margin-top: 15px; display: flex; gap: 10px;">
+                            <span style="background: var(--gold); color: var(--black); padding: 3px 10px; border-radius: 15px; font-size: 0.7rem;">RÉSIDENT</span>
+                            <span style="background: var(--light-gray); color: var(--white); padding: 3px 10px; border-radius: 15px; font-size: 0.7rem;">VENDREDIS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dj-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=400&fit=crop&crop=face" alt="DJ Sparkle" class="dj-image">
+                    <div class="dj-content">
+                        <h3 class="dj-name">DJ Sparkle</h3>
+                        <div class="dj-genre">Disco • Funk • Nu-Disco</div>
+                        <p class="dj-bio">Maître incontesté du groove disco, DJ Sparkle ramène l'esprit des seventies avec une touche moderne. Ses sets paillettés font danser toute la Côte d'Azur sur les plus grands classiques revisités.</p>
+                        <div style="margin-top: 15px; display: flex; gap: 10px;">
+                            <span style="background: var(--pink); color: var(--white); padding: 3px 10px; border-radius: 15px; font-size: 0.7rem;">RÉSIDENT</span>
+                            <span style="background: var(--light-gray); color: var(--white); padding: 3px 10px; border-radius: 15px; font-size: 0.7rem;">SAMEDIS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dj-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=400&fit=crop&crop=face" alt="DJ Phoenix" class="dj-image">
+                    <div class="dj-content">
+                        <h3 class="dj-name">DJ Phoenix</h3>
+                        <div class="dj-genre">Hip Hop • Trap • R&B</div>
+                        <p class="dj-bio">L'énergie du hip hop incarnée, DJ Phoenix enflamme les soirées avec les derniers hits et les classiques du genre. Son style unique mélange trap moderne et R&B old school pour des nuits mémorables.</p>
+                        <div style="margin-top: 15px; display: flex; gap: 10px;">
+                            <span style="background: var(--gold); color: var(--black); padding: 3px 10px; border-radius: 15px; font-size: 0.7rem;">INVITÉ</span>
+                            <span style="background: var(--light-gray); color: var(--white); padding: 3px 10px; border-radius: 15px; font-size: 0.7rem;">SPÉCIAL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dj-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&h=400&fit=crop&crop=face" alt="DJ Luna" class="dj-image">
+                    <div class="dj-content">
+                        <h3 class="dj-name">DJ Luna</h3>
+                        <div class="dj-genre">EDM • Progressive • Trance</div>
+                        <p class="dj-bio">Rising star de la scène électronique, DJ Luna apporte une énergie progressive et des drops épiques. Ses performances visuelles et sonores transportent le club dans une autre dimension.</p>
+                        <div style="margin-top: 15px; display: flex; gap: 10px;">
+                            <span style="background: var(--pink); color: var(--white); padding: 3px 10px; border-radius: 15px; font-size: 0.7rem;">NOUVEAU</span>
+                            <span style="background: var(--light-gray); color: var(--white); padding: 3px 10px; border-radius: 15px; font-size: 0.7rem;">MENSUEL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Past Events Archive -->
+    <section class="section" style="background: var(--gray);">
+        <div class="container">
+            <h2 class="section-title fade-in">Archives des Soirées</h2>
+            <p class="section-subtitle fade-in">Revivez nos plus belles soirées</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 60px;">
+                <div class="fade-in" style="text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=250&h=250&fit=crop" alt="New Year 2024" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px; margin-bottom: 15px;">
+                    <h4 style="color: var(--gold); margin-bottom: 5px;">Réveillon 2024</h4>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">Une nuit magique pour célébrer la nouvelle année</p>
+                </div>
+                
+                <div class="fade-in" style="text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=250&h=250&fit=crop" alt="Halloween 2023" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px; margin-bottom: 15px;">
+                    <h4 style="color: var(--pink); margin-bottom: 5px;">Halloween Masqué</h4>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">Soirée costumée dans l'esprit du théâtre moderne</p>
+                </div>
+                
+                <div class="fade-in" style="text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=250&h=250&fit=crop" alt="Summer Festival" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px; margin-bottom: 15px;">
+                    <h4 style="color: var(--gold); margin-bottom: 5px;">Festival d'Été</h4>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">3 jours de musique non-stop sur la terrasse</p>
+                </div>
+                
+                <div class="fade-in" style="text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1571266028243-d220c2dcbf53?w=250&h=250&fit=crop" alt="Cannes Festival" style="width: 100%; height: 200px; object-fit: cover; border-radius: 15px; margin-bottom: 15px;">
+                    <h4 style="color: var(--pink); margin-bottom: 5px;">Festival de Cannes</h4>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">After-parties exclusives pendant le festival</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="section">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title fade-in">Ne Manquez Aucune Soirée</h2>
+            <p class="section-subtitle fade-in">Réservez votre table pour les meilleurs événements de Cannes</p>
+            
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
+                <a href="booking.html" class="btn btn-primary btn-magnetic">Réserver Maintenant</a>
+                <a href="#" onclick="openWhatsApp()" class="btn btn-pink btn-magnetic">WhatsApp</a>
+                <a href="gallery.html" class="btn btn-secondary btn-magnetic">Voir les Photos</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Bisous Bisous Club</h3>
+                    <p>Événements exceptionnels dans le cadre le plus prestigieux de Cannes.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/bisousbisousclub" class="social-link" target="_blank">📷</a>
+                        <a href="https://facebook.com/bisousbisousclub" class="social-link" target="_blank">👥</a>
+                        <a href="https://tiktok.com/@bisousbisousclub" class="social-link" target="_blank">🎵</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Programmation</h3>
+                    <p>Vendredi: Deep House & Techno</p>
+                    <p>Samedi: Disco & Nu-Disco</p>
+                    <p>Événements spéciaux sur demande</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Réservations</h3>
+                    <a href="booking.html">Réserver une Table</a>
+                    <a href="#" onclick="openWhatsApp()">WhatsApp Booking</a>
+                    <a href="contact.html">Nous Contacter</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liens Utiles</h3>
+                    <a href="gallery.html">Galerie Photos</a>
+                    <a href="menu.html">Carte & Bouteilles</a>
+                    <a href="about.html">À Propos du Club</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bisous Bisous Club. Tous droits réservés. | 
+                <a href="#">Mentions Légales</a> | 
+                <a href="#">Confidentialité</a> | 
+                Designed by <a href="https://wingfieldgemini.github.io" target="_blank">WingfieldGemini</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
